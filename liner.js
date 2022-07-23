@@ -92,7 +92,7 @@ LineByLine.prototype._readChunk = function(lineLeftovers) {
     let bytesRead;
     let buffers = [];
     do {
-        let readBuffer = new Buffer(this.options.readChunk);
+        let readBuffer = Buffer.alloc(this.options.readChunk);
 
         bytesRead = fs.readSync(this.fd, readBuffer, 0, this.options.readChunk, this.fdPosition);
         totalBytesRead = totalBytesRead + bytesRead;
