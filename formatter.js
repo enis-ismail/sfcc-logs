@@ -23,9 +23,9 @@ function summaryHtml(errors) {
 		.join('<br/>');
 
 	const row = err => `<tr>
-		<td><b>${err.total}</b></td>
-		<td nowrap>${sortDesc(err.sites)}</td>
-		<td nowrap>${sortDesc(err.pipes)}</td>
+		<td class="${err.class}"><b>${err.total}</b></td>
+		<td nowrap class="${err.class}">${sortDesc(err.sites)}</td>
+		<td nowrap class="${err.class}">${sortDesc(err.pipes)}</td>
 		<td><b>${err.msg}</b><br/>${err.desc}</td>
 	</tr>`;
 	
@@ -42,6 +42,9 @@ function summaryHtml(errors) {
 				padding: 10px;
 				border-bottom: 1px solid #ddd;
 			}
+			.error-critical {
+				color: red;
+			}
 		</style></head>
 		<body><table>
 			<thead><tr><th>total</th><th>sites</th><th>pipelines</th><th>error</th></tr></thead>
@@ -49,5 +52,3 @@ function summaryHtml(errors) {
 		</table></body>
 	</html>`;
 }
-
-

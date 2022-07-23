@@ -72,7 +72,8 @@ function analyze(log) {
 						'sites': {},
 						'pipes': {},
 						'desc': desc,
-						'msg': msg
+						'msg': msg,
+						'class': ''
 					};
 				}
 				_errors[key].total++;
