@@ -1,0 +1,13 @@
+{
+    "hostname": "zzzz-001.dx.commercecloud.salesforce.com",
+    "profiles": {
+        "capiprofile": {
+            "client_id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "client_secret": "clientsecret123"
+        },
+        "bmprofile": {
+            "username": "bmuser@salesforce.com",
+            "password": "bmuserpassword123"
+        }
+    }
+}

@@ -59,3 +59,5 @@ typings/
 
 # VS Code workspace file
 *.code-workspace
+
+dwconfig.json

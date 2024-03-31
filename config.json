@@ -1,6 +1,6 @@
 {
-  "LOGSDIR": "./logs",
-  "SUMMARY_FILENAME": "summary",
-  "MINIMUM_ERRORS_TRESHOLD": 50,
-  "CRITICAL_ERRORS_TRESHOLD": 100
+    "LOGSDIR": "./logs",
+    "SUMMARY_FILENAME": "sfcc-logs-report-[DATE]",
+    "MINIMUM_ERRORS_TRESHOLD": 50,
+    "CRITICAL_ERRORS_TRESHOLD": 100
 }

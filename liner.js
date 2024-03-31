@@ -1,10 +1,8 @@
 'use strict';
 
-module.exports = LineByLine;
+import * as fs from 'fs';
 
-const fs = require('fs');
-
-function LineByLine(file, options) {
+export function LineByLine(file, options) {
     options = options || {};
 
     if (!options.readChunk) {
@@ -158,4 +156,3 @@ LineByLine.prototype.next = function() {
 
     return line && line.toString() || '';
 };
-
