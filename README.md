@@ -1,6 +1,6 @@
 # Salesforce Commerce Cloud Logs Analyzer
 
-> Download and analyze given SFCC instance logs. The report is generated in an html file with all the errors exceeding the threshold, sorted by severity.
+> Download and analyze target SFCC instance logs. The report is generated in an html file with all the errors exceeding a threshold, sorted by severity.
 
 ## Features
 
@@ -23,9 +23,9 @@ $ npm i
 Requires the following configuration files:
 
 - a `dwconfig.json` file with containing instance credentials to be used when connecting to WebDAV. Use `dwconfig.sample.json` as a template.
-- a `config.json` file containing the error thresholds, folder where the logs will be downloaded, and the file name of the report
+- a `config.json` file containing the error thresholds, the folder where the log files will be downloaded, and the file name of the report
 
-`sfcc-logs` requires a correctly configured API client id/secret OR Business Manager username/password for accessing logs via webdav. **API client authentication is recommended, because it is faster after the initial authorization, and Business Manager authentication to WebDAV has been _deprecated_ by Salesforce.**
+`sfcc-logs` requires a correctly configured API client ID/secret OR Business Manager username/password for accessing logs via webdav. **API client authentication is recommended, because it is faster after the initial authorization, and Business Manager authentication to WebDAV has been _deprecated_ by Salesforce.**
 
 ### Sample configuration files
 
@@ -60,7 +60,7 @@ Sample config.json:
 
 The API client ID must be created in the account.demandware.com console. Before being able to use `sfcc-logs` you must grant the required permissions to that client ID for accessing the logs folder through WebDAV in any target SFCC instance.
 
-To do so, access Business Manager and add the following to Administration -> Organization -> WebDAV Client Permissions, replacing the client_id value with your client id. **Note:** you may need to merge these settings with existing ones.
+To do so, access Business Manager and add the following to Administration -> Organization -> WebDAV Client Permissions, replacing the client_id value with your client ID. **Note:** you may need to merge these settings with existing ones.
 
 ```json
 {
@@ -81,7 +81,7 @@ To do so, access Business Manager and add the following to Administration -> Org
 ## Usage
 
 ```bash
-$ npm run start
+$ npm start
 ```
 Check `/logs/sfcc-logs-report-[CURRENT_DATE].html` to see the generated report.
 
